@@ -12,6 +12,7 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
     $email = filter_var($_POST["email"], FILTER_SANITIZE_EMAIL);
     $phone = isset($_POST["phoneNumber"]) ? htmlspecialchars($_POST["phoneNumber"]) : '';
     $subject = isset($_POST["subject"]) ? htmlspecialchars($_POST["subject"]) : 'Consultation Request';
+    $referral = isset($_POST["referral"]) ? htmlspecialchars($_POST["referral"]) : 'Other';
     $message = htmlspecialchars($_POST["message"]);
 
     if (!filter_var($email, FILTER_VALIDATE_EMAIL)) {
@@ -49,6 +50,7 @@ $mail->isSMTP();
                         "Name: $name\n".
                         "Email: $email\n".
                         "Phone Number: $phone\n".
+                        "How did you know about us?: $referral\n".
                         "\n$message";;
 
     $mail->send();
