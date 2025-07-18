@@ -418,6 +418,9 @@ nav ul li a.active:after {
 .client-details a :hover {
   color: #bf0a30;
 }
+.client-details p {
+  margin-bottom: 0px;
+}
 .slider-controls {
   text-align: center;
   margin-top: 20px;
