@@ -122,6 +122,7 @@ section {
 .btn-large {
   padding: 12px 25px;
   font-size: 16px;
+  cursor: pointer;
 }
 /* Header Styles */
 header {
@@ -1284,6 +1285,7 @@ nav ul li a.active:after {
   }
 
   .cta-button .btn {
+    display: none;
     padding: 8px 15px;
     font-size: 13px;
   }
